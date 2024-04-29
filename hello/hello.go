@@ -15,13 +15,17 @@ func Hello(name, language string) string {
     name = "World"
   }
 
+  return greetingPrefix(language) + name
+}
+
+func greetingPrefix(language string) string {
   switch language {
   case spanish:
-    return spanishHelloPrefix + name
+    return spanishHelloPrefix
   case french:
-    return frenchHelloPrefix + name
+    return frenchHelloPrefix
   default:
-    return englishHelloPrefix + name
+    return englishHelloPrefix
   }
 }
 
